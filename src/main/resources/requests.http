@@ -1,0 +1,21 @@
+POST http://localhost:8080/signup
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+    "login": "aina",
+    "password": "aina1999"
+}
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "login": "aina1",
+  "password": "aina1999"
+}
