@@ -22,7 +22,7 @@ import ru.itis.platform.security.util.JwtTokenUtil;
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
-@ComponentScan("ru.itis")
+@ComponentScan("ru.itis.platform")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final JwtTokenUtil util;
     private final UserDetailsImpl service;
@@ -63,5 +63,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().authenticationEntryPoint(util)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authenticationProvider(provider);
+        http.authorizeRequests().antMatchers("/swagger-ui.html#/**").permitAll();
     }
 }

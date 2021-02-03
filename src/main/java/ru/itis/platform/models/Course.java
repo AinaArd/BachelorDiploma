@@ -1,5 +1,6 @@
 package ru.itis.platform.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,26 +9,23 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "\"user\"")
-public class User {
+public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String login;
-    private String password;
-    private String fullName;
 
-    private Role role;
+    private String title;
+    private String description;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @ManyToOne
     @LazyCollection(LazyCollectionOption.FALSE)
-    private List<Course> courses;
+    @JsonIgnore
+    private User user;
 }

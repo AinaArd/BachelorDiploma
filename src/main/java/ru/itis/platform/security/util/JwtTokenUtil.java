@@ -2,6 +2,7 @@ package ru.itis.platform.security.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -18,7 +19,8 @@ import java.util.function.Function;
 @Component
 public class JwtTokenUtil implements Serializable, AuthenticationEntryPoint {
 
-    private static final String SECRET = "secret";
+    @Value("${jwt.secret}")
+    private String secretKey;
 
     public String getUsernameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
@@ -34,7 +36,7 @@ public class JwtTokenUtil implements Serializable, AuthenticationEntryPoint {
     }
 
     private Claims getAllClaimsFromToken(String token) {
-        return Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token).getBody();
+        return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
     }
 
     private Boolean isTokenExpired(String token) {
