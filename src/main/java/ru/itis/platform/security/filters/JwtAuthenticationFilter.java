@@ -14,23 +14,22 @@ import java.io.IOException;
 public class JwtAuthenticationFilter implements Filter {
     private final static String AUTH_HEADER = "Authorization";
     private final JwtAuthenticationProvider provider;
+    private final JwtAuthentication authentication;
 
     @Autowired
-    public JwtAuthenticationFilter(JwtAuthenticationProvider provider) {
+    public JwtAuthenticationFilter(JwtAuthenticationProvider provider, JwtAuthentication authentication) {
         this.provider = provider;
+        this.authentication = authentication;
     }
 
     @Override
-    public void init(FilterConfig filterConfig) {
+    public void init(FilterConfig filterConfig) throws ServletException {
     }
 
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
-            throws IOException, ServletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         String headerValue = request.getHeader(AUTH_HEADER);
-        JwtAuthentication authentication = new JwtAuthentication();
-
         if (headerValue != null) {
             authentication.setToken(headerValue);
             SecurityContextHolder.getContext().setAuthentication(provider.authenticate(authentication));

@@ -21,7 +21,7 @@ public class UserDetailsImpl implements UserDetails, UserDetailsService {
 
     private User user;
     private String token;
-    private UserRepository usersRepository;
+    private UserRepository userRepository;
 
     UserDetailsImpl(User user) {
         this.user = user;
@@ -29,7 +29,7 @@ public class UserDetailsImpl implements UserDetails, UserDetailsService {
 
     @Autowired
     public UserDetailsImpl(UserRepository userRepository) {
-        this.usersRepository = userRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -71,8 +71,8 @@ public class UserDetailsImpl implements UserDetails, UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        Optional<User> user = usersRepository.findByLogin(login);
-        if (!user.isPresent()) {
+        Optional<User> user = userRepository.findByLogin(login);
+        if (user.isEmpty()) {
             throw new UsernameNotFoundException("User not found with login: " + login);
         }
         return new UserDetailsImpl(user.get());
