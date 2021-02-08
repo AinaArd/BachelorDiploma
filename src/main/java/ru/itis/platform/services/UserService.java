@@ -20,4 +20,6 @@ public interface UserService {
     User updateUserInfo(String login, EditUser userDto);
 
     User changeUserPassword(String login, String password);
+
+    boolean signUpUserForCourse(User user, Long courseId);
 }

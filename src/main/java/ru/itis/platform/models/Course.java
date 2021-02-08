@@ -9,6 +9,7 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Builder
@@ -24,8 +25,8 @@ public class Course {
     private String title;
     private String description;
 
-    @ManyToOne
+    @ManyToMany(mappedBy = "courses")
     @LazyCollection(LazyCollectionOption.FALSE)
     @JsonIgnore
-    private User user;
+    private List<User> users;
 }

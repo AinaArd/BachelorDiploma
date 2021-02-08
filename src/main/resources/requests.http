@@ -37,14 +37,6 @@ Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8
 
 ###
 
-GET http://localhost:8080/profile
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
-
-###
-
 POST http://localhost:8080/profile
 Accept: */*
 Cache-Control: no-cache
@@ -66,3 +58,13 @@ Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8
 {
   "fullName": "Aina Aina Aina"
 }
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+###
