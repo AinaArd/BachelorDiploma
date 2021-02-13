@@ -16,7 +16,6 @@ import java.util.List;
 @AllArgsConstructor
 public class UserDto {
     private String login;
-    private String password;
     private String fullName;
     private List<Course> courses;
     private Role role;
@@ -24,6 +23,7 @@ public class UserDto {
     public static UserDto from(User user) {
         return UserDto.builder()
                 .login(user.getLogin())
+                .fullName(user.getFullName())
                 .courses(user.getCourses())
                 .role(user.getRole())
                 .build();

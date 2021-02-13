@@ -30,7 +30,6 @@ public class ProfileController {
     public ResponseEntity<?> getUserProfile(Authentication authentication) {
         Optional<User> userCandidate = userService.getCurrentUser(authentication);
         if (userCandidate.isPresent()) {
-//            TODO: remove password from dto
             return ResponseEntity.ok(UserDto.from(userCandidate.get()));
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseDto("User is not found"));
