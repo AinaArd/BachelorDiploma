@@ -49,4 +49,15 @@ public class ProfileController {
         User updatedUser = userService.changeUserPassword(authentication.getName(), dto.get("password"));
         return ResponseEntity.ok(UserDto.from(updatedUser));
     }
+
+    @GetMapping("/apps")
+    @PreAuthorize("isAuthenticated()")
+    public ResponseEntity<?> getUserApps(Authentication authentication) {
+        Optional<User> userCandidate = userService.getCurrentUser(authentication);
+        if (userCandidate.isPresent()) {
+            return ResponseEntity.ok(userCandidate.get().getApps());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseDto("User is not found"));
+        }
+    }
 }

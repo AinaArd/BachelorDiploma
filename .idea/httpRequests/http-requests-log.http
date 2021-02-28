@@ -1,0 +1,560 @@
+GET http://localhost:8080/profile/apps
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-03-01T123650.200.json
+
+###
+
+POST http://localhost:8080/courses/1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+    "appName": "testApp"
+}
+
+<> 2021-03-01T123640.200.json
+
+###
+
+GET http://localhost:8080/profile/apps
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-03-01T122840.200.json
+
+###
+
+POST http://localhost:8080/courses/1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-28T115425.200.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-13T053743.200.json
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "login": "aina",
+  "password": "aina1997"
+}
+
+<> 2021-02-13T053719.200.txt
+
+###
+
+GET http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-09T101948.200.json
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "login": "aina",
+  "password": "aina1997"
+}
+
+<> 2021-02-09T101937.200.txt
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-08T100754.200.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-08T100521.200.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-08T100009.200.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T011345.200.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T011020.200.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T010828.200.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T010449.404.json
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "login": "aina",
+  "password": "aina1997"
+}
+
+<> 2021-02-03T010358.200.txt
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T010329.404.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T010301.404.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T010215.404.json
+
+###
+
+POST http://localhost:8080/courses/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T010119.404.json
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "login": "aina",
+  "password": "aina1997"
+}
+
+<> 2021-02-03T123340.200.txt
+
+###
+
+PATCH http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "fullName": "Aina Aina Aina"
+}
+
+<> 2021-02-03T123256.200.json
+
+###
+
+POST http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "password": "aina1997"
+}
+
+<> 2021-02-03T123138.200.json
+
+###
+
+POST http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "password": "aina1999"
+}
+
+<> 2021-02-03T123116.200.json
+
+###
+
+POST http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "password": "aina1999"
+}
+
+<> 2021-02-03T122807.200.json
+
+###
+
+POST http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "password": "aina1999"
+}
+
+<> 2021-02-03T122517.400.json
+
+###
+
+PATCH http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "fullName": "Aina Aina Aina"
+}
+
+<> 2021-02-03T122317.400.json
+
+###
+
+GET http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T122237.200.json
+
+###
+
+GET http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-03T121623.200.json
+
+###
+
+POST http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "password": "aina1998"
+}
+
+<> 2021-02-02T093845.200.json
+
+###
+
+POST http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "password": "aina1998"
+}
+
+<> 2021-02-02T093526.500.json
+
+###
+
+POST http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "password": "aina1998"
+}
+
+<> 2021-02-02T093242.500.json
+
+###
+
+GET http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-02T093219.200.json
+
+###
+
+GET http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-02T093034.500.json
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-02T090343.200.json
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-02T085519.200.json
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "login": "aina",
+  "password": "aina1999"
+}
+
+<> 2021-02-02T085507.200.txt
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-02T083634.200.json
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-02T083536.200.json
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-02T083106.200.json
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-01T064901.200.json
+
+###
+
+GET http://localhost:8080/exam
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-01T064303.404.json
+
+###
+
+GET http://localhost:8080/check
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-01T064138.404.json
+
+###
+
+GET http://localhost:8080/check
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-01T054041.404.json
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-02-01T053050.200.txt
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "login": "aina",
+  "password": "aina1999"
+}
+
+<> 2021-02-01T053035.200.txt
+
+###
+
+GET http://localhost:8080/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2021-02-01T052922.200.txt
+
+###
+
+GET http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2021-02-01T052610.200.json
+
+###
+
+GET http://localhost:8080/profile
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+<> 2021-01-31T114426.200.json
+
+###
+
