@@ -2,6 +2,7 @@ package ru.itis.platform.services;
 
 import org.springframework.security.core.Authentication;
 import ru.itis.platform.dto.EditUser;
+import ru.itis.platform.dto.NewUserDto;
 import ru.itis.platform.dto.TokenDto;
 import ru.itis.platform.dto.UserDto;
 import ru.itis.platform.models.User;
@@ -9,7 +10,7 @@ import ru.itis.platform.models.User;
 import java.util.Optional;
 
 public interface UserService {
-    void signup(UserDto dto);
+    void signup(NewUserDto dto);
 
     TokenDto login(UserDto dto);
 

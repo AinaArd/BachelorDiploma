@@ -7,8 +7,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import ru.itis.platform.dto.NewUserDto;
 import ru.itis.platform.dto.ResponseDto;
-import ru.itis.platform.dto.UserDto;
 import ru.itis.platform.services.UserService;
 
 @RestController
@@ -22,7 +22,7 @@ public class SingupController {
 
     @PreAuthorize("permitAll()")
     @PostMapping("/signup")
-    public ResponseEntity<?> signUpNewUser(@RequestBody UserDto dto) {
+    public ResponseEntity<?> signUpNewUser(@RequestBody NewUserDto dto) {
         userService.signup(dto);
         return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto("Successfully added user"));
     }

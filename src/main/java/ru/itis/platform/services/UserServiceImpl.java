@@ -9,6 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.itis.platform.dto.EditUser;
+import ru.itis.platform.dto.NewUserDto;
 import ru.itis.platform.dto.TokenDto;
 import ru.itis.platform.dto.UserDto;
 import ru.itis.platform.models.Course;
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void signup(UserDto dto) {
+    public void signup(NewUserDto dto) {
         if (!exists(dto.getLogin())) {
             String hashPassword = passwordEncoder.encode(dto.getPassword());
             User newUser = User.builder()
@@ -68,7 +69,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> findByLogin(String login) {
-//        TODO: add any checks?
+        if (checkForUniqueness(login)) {
+            return Optional.empty();
+        }
         return userRepository.findByLogin(login);
     }
 
@@ -99,8 +102,6 @@ public class UserServiceImpl implements UserService {
                 .anyMatch(c -> c.getId().equals(courseId));
         Course course = coursesRepository.findById(courseId).orElseThrow(IllegalArgumentException::new);
         if (!isAlreadyJoined) {
-//            course.getUsers().add(user);
-//            coursesRepository.save(course);
             user.getCourses().add(course);
             userRepository.save(user);
             return true;
@@ -118,5 +119,10 @@ public class UserServiceImpl implements UserService {
                 .value(value)
                 .status(TokenStatus.VALID)
                 .build();
+    }
+
+    private boolean checkForUniqueness(String login) {
+        Optional<User> user = userRepository.findByLogin(login);
+        return user.isEmpty();
     }
 }

@@ -30,7 +30,6 @@ public class ProfileController {
     public ResponseEntity<?> getUserProfile(Authentication authentication) {
         Optional<User> userCandidate = userService.getCurrentUser(authentication);
         if (userCandidate.isPresent()) {
-//            TODO: remove password from dto
             return ResponseEntity.ok(UserDto.from(userCandidate.get()));
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseDto("User is not found"));
@@ -49,5 +48,16 @@ public class ProfileController {
     public ResponseEntity<?> updateUserPassword(Authentication authentication, @RequestBody Map<String, String> dto) {
         User updatedUser = userService.changeUserPassword(authentication.getName(), dto.get("password"));
         return ResponseEntity.ok(UserDto.from(updatedUser));
+    }
+
+    @GetMapping("/apps")
+    @PreAuthorize("isAuthenticated()")
+    public ResponseEntity<?> getUserApps(Authentication authentication) {
+        Optional<User> userCandidate = userService.getCurrentUser(authentication);
+        if (userCandidate.isPresent()) {
+            return ResponseEntity.ok(userCandidate.get().getApps());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseDto("User is not found"));
+        }
     }
 }
