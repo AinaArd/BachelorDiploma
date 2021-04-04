@@ -24,6 +24,7 @@ public class App {
 
     private String appName;
     private LocalDateTime creationDate;
+    private String code;
 
     @ManyToOne
     @LazyCollection(LazyCollectionOption.FALSE)

@@ -41,7 +41,7 @@ public class CoursesController {
                 appService.createAppInstanсe(userCandidate.get(), courseId, appDto);
                 return ResponseEntity.status(HttpStatus.OK).body(from(userCandidate.get()));
             } else {
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseDto("User has already signd up for the course."));
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseDto("User has already signed up for the course."));
             }
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseDto("User is not found"));

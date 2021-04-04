@@ -10,5 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AppDto {
+    private Long id;
     private String appName;
+    private String code;
 }

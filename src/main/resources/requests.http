@@ -78,3 +78,23 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+###
+
+GET http://localhost:8080/app/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+###
+
+PATCH http://localhost:8080/app/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+
+{
+  "code": "test code"
+}

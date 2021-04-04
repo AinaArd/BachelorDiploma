@@ -33,4 +33,18 @@ public class AppServiceImpl implements AppService {
         appRepository.save(newApp);
 //        TODO: bind with course
     }
+
+    @Override
+    public void updateApp(AppDto appDto, User currentUser, Long appId) {
+        App app = getAppById(appId);
+        if(appDto.getCode() != null) {
+            app.setCode(appDto.getCode());
+        }
+        appRepository.save(app);
+    }
+
+    @Override
+    public App getAppById(Long appId) {
+        return appRepository.findById(appId).orElseThrow(() -> new IllegalArgumentException("No app with such id"));
+    }
 }
