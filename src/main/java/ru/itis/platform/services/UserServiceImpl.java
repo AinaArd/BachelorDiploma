@@ -13,11 +13,13 @@ import ru.itis.platform.dto.NewUserDto;
 import ru.itis.platform.dto.TokenDto;
 import ru.itis.platform.dto.UserDto;
 import ru.itis.platform.models.Course;
+import ru.itis.platform.models.Role;
 import ru.itis.platform.models.TokenStatus;
 import ru.itis.platform.models.User;
 import ru.itis.platform.repositories.CourseRepository;
 import ru.itis.platform.repositories.UserRepository;
 import ru.itis.platform.security.details.UserDetailsImpl;
+import ru.itis.platform.security.util.JwtTokenUtil;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -28,16 +30,18 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final CourseRepository coursesRepository;
+    private final JwtTokenUtil jwtTokenUtil;
 
     @Value("${jwt.secret}")
     private String key;
 
     @Autowired
     public UserServiceImpl(PasswordEncoder passwordEncoder, UserRepository userRepository,
-                           CourseRepository coursesRepository) {
+                           CourseRepository coursesRepository, JwtTokenUtil jwtTokenUtil) {
         this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
         this.coursesRepository = coursesRepository;
+        this.jwtTokenUtil = jwtTokenUtil;
     }
 
     @Override
@@ -48,6 +52,7 @@ public class UserServiceImpl implements UserService {
                     .login(dto.getLogin())
                     .password(hashPassword)
                     .fullName(dto.getFullName())
+                    .role(Role.STUDENT)
                     .build();
             userRepository.save(newUser);
         } else {
@@ -107,6 +112,12 @@ public class UserServiceImpl implements UserService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Optional<User> getUserByToken(String token) {
+        Optional<User> userCandidate = findByLogin(jwtTokenUtil.getUsernameFromToken(token));
+        return userCandidate;
     }
 
     private TokenDto createToken(User user) {

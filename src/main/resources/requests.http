@@ -4,8 +4,8 @@ Cache-Control: no-cache
 Content-Type: application/json
 
 {
-    "login": "aina",
-    "password": "aina1999"
+  "login": "aina",
+  "password": "aina1999"
 }
 
 ###
@@ -16,8 +16,7 @@ Cache-Control: no-cache
 Content-Type: application/json
 
 {
-  "login": "aina",
-  "password": "aina1997"
+  "login": "aina"
 }
 
 ###
@@ -61,15 +60,19 @@ Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8
 
 ###
 
-POST http://localhost:8080/courses/1
+POST http://localhost:8080/courses/2
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
 
-{
-    "appName": "testApp"
-}
+###
+
+GET http://localhost:8080/courses
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
 
 ###
 
@@ -81,7 +84,7 @@ Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8
 
 ###
 
-GET http://localhost:8080/app/2
+GET http://localhost:8080/app/3
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -89,12 +92,26 @@ Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8
 
 ###
 
-PATCH http://localhost:8080/app/2
+PATCH http://localhost:8080/app/3
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
 
 {
-  "code": "test code"
+  "code": "test code",
+  "appClassName": "User",
+  "words": [
+    "login",
+    "password"
+  ]
 }
+
+###
+
+POST http://localhost:8080/app/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbiI6ImFpbmEiLCJpZCI6Mn0.MdqHbXRMiuh8RsqY1KyJEihGFt7m_zXcWJYrEC_F1lDRV3r1azROwagm6Aio3eE45eWS47Z0wnmVpaRfQLHtIg
+

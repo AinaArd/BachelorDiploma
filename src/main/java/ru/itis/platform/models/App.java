@@ -1,10 +1,7 @@
 package ru.itis.platform.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -16,6 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@ToString(exclude = "course")
 public class App {
 
     @Id
@@ -24,10 +22,14 @@ public class App {
 
     private String appName;
     private LocalDateTime creationDate;
-    private String code;
+    private String projectPath;
+    private Status status;
 
     @ManyToOne
     @LazyCollection(LazyCollectionOption.FALSE)
     @JsonIgnore
     private User user;
+
+    @OneToOne
+    private Course course;
 }

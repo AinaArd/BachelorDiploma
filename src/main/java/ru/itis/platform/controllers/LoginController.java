@@ -6,12 +6,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.itis.platform.dto.TokenDto;
 import ru.itis.platform.dto.UserDto;
 import ru.itis.platform.services.UserService;
 
 @RestController
+@RequestMapping("/login")
 public class LoginController {
     private final UserService userService;
 
@@ -21,8 +23,8 @@ public class LoginController {
     }
 
     @PreAuthorize("permitAll()")
-    @PostMapping("/login")
-    public ResponseEntity<?> singinUser(@RequestBody UserDto dto) {
+    @PostMapping()
+    public ResponseEntity<?> singInUser(@RequestBody UserDto dto) {
         TokenDto tokenDto = userService.login(dto);
         return ResponseEntity.status(HttpStatus.OK).body(tokenDto.getValue());
     }

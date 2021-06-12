@@ -23,4 +23,6 @@ public interface UserService {
     User changeUserPassword(String login, String password);
 
     boolean signUpUserForCourse(User user, Long courseId);
+
+    Optional<User> getUserByToken(String token);
 }

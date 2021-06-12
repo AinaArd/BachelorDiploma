@@ -6,14 +6,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import ru.itis.platform.dto.AppDto;
 import ru.itis.platform.dto.EditUser;
 import ru.itis.platform.dto.ResponseDto;
 import ru.itis.platform.dto.UserDto;
 import ru.itis.platform.models.User;
 import ru.itis.platform.services.UserService;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path = "/profile")
@@ -27,7 +30,7 @@ public class ProfileController {
 
     @GetMapping
     @PreAuthorize("isAuthenticated()")
-    public ResponseEntity<?> getUserProfile(Authentication authentication) {
+    public ResponseEntity<?> getUserProfile(Authentication authentication, @RequestHeader("Authorization") String token) {
         Optional<User> userCandidate = userService.getCurrentUser(authentication);
         if (userCandidate.isPresent()) {
             return ResponseEntity.ok(UserDto.from(userCandidate.get()));
@@ -51,11 +54,15 @@ public class ProfileController {
     }
 
     @GetMapping("/apps")
-    @PreAuthorize("isAuthenticated()")
+//    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<?> getUserApps(Authentication authentication) {
-        Optional<User> userCandidate = userService.getCurrentUser(authentication);
+//        Optional<User> userCandidate = userService.getCurrentUser(authentication);
+        Optional<User> userCandidate = userService.findByLogin("aina");
         if (userCandidate.isPresent()) {
-            return ResponseEntity.ok(userCandidate.get().getApps());
+            List<AppDto> appDtos = userCandidate.get().getApps().stream()
+                    .map(AppDto::from)
+                    .collect(Collectors.toList());
+            return ResponseEntity.status(HttpStatus.OK).body(appDtos);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseDto("User is not found"));
         }

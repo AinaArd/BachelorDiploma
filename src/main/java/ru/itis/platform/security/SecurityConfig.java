@@ -14,6 +14,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import ru.itis.platform.security.details.UserDetailsImpl;
 import ru.itis.platform.security.filters.JwtAuthenticationFilter;
 import ru.itis.platform.security.providers.JwtAuthenticationProvider;
@@ -41,6 +42,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean(name = "multipartResolver")
+    public CommonsMultipartResolver multipartResolver() {
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+        multipartResolver.setMaxUploadSize(150000);
+        return multipartResolver;
     }
 
     @Bean

@@ -1,33 +1,34 @@
 package ru.itis.platform.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@ToString(exclude = "app")
-public class Course {
+public class AppClass {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
-    private String description;
+    private String className;
+    private String code;
 
-    @ManyToMany(mappedBy = "courses")
+    @ManyToOne
     @LazyCollection(LazyCollectionOption.FALSE)
     @JsonIgnore
-    private List<User> users;
-
-    @OneToOne
     private App app;
 }
+
+
+// TODO: plugin for text code formatting
